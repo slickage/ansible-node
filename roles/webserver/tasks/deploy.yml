@@ -1,9 +1,9 @@
 ---
-# Ruby from source playbook (https://github.com/jgrowl/ansible-playbook-ruby-from-src)
-- name: upgrade
+# Node.js from source
+- name: Upgrade
   action: apt update_cache=yes upgrade=yes
 
-- name: install ruby dependencies 
+- name: Install build dependencies
   action: apt pkg={{item}} state=installed
   with_items:
     - build-essential
